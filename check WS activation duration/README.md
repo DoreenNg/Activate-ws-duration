@@ -1,6 +1,6 @@
 # Time taken for WebSocket to become activated (Linux terminal)
 ## Check how long WebSocket takes to activate after publishing on the T2 portal
-dig_output.txt is just a sample of how the output fle would look like.
+dig_output.txt is just a sample of how the output file would look like.
 
 ### How to run:
 1. Download Python file.
