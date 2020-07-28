@@ -1,0 +1,22 @@
+
+; <<>> DiG 9.16.1-Ubuntu <<>> checkws1.toffsintern.ml
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 3815
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;checkws1.toffsintern.ml.	IN	A
+
+;; ANSWER SECTION:
+checkws1.toffsintern.ml. 5	IN	CNAME	mpbolq2q70kl.cdndd.net.
+mpbolq2q70kl.cdndd.net.	4	IN	CNAME	websocket.cdndd.net.
+websocket.cdndd.net.	4	IN	A	128.199.166.215
+
+;; Query time: 124 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Tue Jul 28 04:51:27 EDT 2020
+;; MSG SIZE  rcvd: 128
+
