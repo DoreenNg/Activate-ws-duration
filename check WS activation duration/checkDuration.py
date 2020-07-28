@@ -14,7 +14,8 @@ def main():
 			maintainLoop = False
 
 	end = timer()
-	print((end - start)/60)
+	print("WebSocket is now active!")
+	print("Time taken for WebSocket to become active:" (end - start)/60)
 
 
 def cmdOuputToTxtfile(command):
