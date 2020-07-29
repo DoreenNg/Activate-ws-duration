@@ -19,6 +19,7 @@ def main():
 		if ((end-start)/60) > 60:
 			print("It has been an hour and WebSocket is still not active. Digging shall stop here.")
 			ws = False
+			break
 
 	if ws != False:
 		print("WebSocket is now active!")
