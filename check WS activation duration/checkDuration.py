@@ -10,18 +10,20 @@ def main():
 	maintain_loop = True
 	start = timer()
 
-
+	# Loop until check_forward_cname() gives True(WS cname is in the dig result)
 	while maintain_loop:
 		#subprocess.call(["dig", "custws3.toffsintern.ml", ">>", "dig_output.txt"])
 		dig_output_to_txt(["dig", url])
 		if check_forward_cname() == True:
 			maintain_loop = False
 		end = timer()
+
+		# If more than an hour passed and the WS cname is still not in the dig result, then we stop the script
 		if ((end-start)/60) > 60 and maintain_loop == True:
 			print("\nIt has been an hour and WebSocket is still not active. Digging shall stop here.\n")
-			ws = False
 			break
 
+	# Loop finished since WS cname is found. Returns the duration.
 	if maintain_loop == False:
 		print("\nWebSocket is now active!")
 		print("Time taken for WebSocket to become active: {0:.2f}mins".format((end - start)/60))

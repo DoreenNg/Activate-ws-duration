@@ -1,20 +1,22 @@
 
-; <<>> DiG 9.11.3-1ubuntu1.11-Ubuntu <<>> lalala.toffsintern.ml
+; <<>> DiG 9.11.3-1ubuntu1.11-Ubuntu <<>> wscname.toffsintern.ml
 ;; global options: +cmd
 ;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 10366
-;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 11084
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
 
 ;; OPT PSEUDOSECTION:
 ; EDNS: version: 0, flags:; udp: 512
 ;; QUESTION SECTION:
-;lalala.toffsintern.ml.		IN	A
+;wscname.toffsintern.ml.		IN	A
 
-;; AUTHORITY SECTION:
-toffsintern.ml.		1740	IN	SOA	ns1.digitalocean.com. hostmaster.toffsintern.ml. 1595986131 10800 3600 604800 1800
+;; ANSWER SECTION:
+wscname.toffsintern.ml.	29	IN	CNAME	hrbat4dliiwo.cdndd.net.
+hrbat4dliiwo.cdndd.net.	599	IN	CNAME	websocket.cdndd.net.
+websocket.cdndd.net.	9	IN	A	128.199.166.215
 
-;; Query time: 14 msec
+;; Query time: 1297 msec
 ;; SERVER: 192.168.1.254#53(192.168.1.254)
-;; WHEN: Wed Jul 29 11:59:03 +08 2020
-;; MSG SIZE  rcvd: 117
+;; WHEN: Wed Jul 29 13:04:02 +08 2020
+;; MSG SIZE  rcvd: 127
 
