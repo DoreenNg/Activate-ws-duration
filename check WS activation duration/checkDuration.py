@@ -2,6 +2,9 @@ import subprocess
 from timeit import default_timer as timer
 
 def main():
+
+	url = input("Enter URL to dig: ")
+
 	print("COMMENCE DIGGING!")
 
 	maintainLoop = True
@@ -9,13 +12,17 @@ def main():
 
 	while maintainLoop:
 		#subprocess.call(["dig", "custws3.toffsintern.ml", ">>", "dig_output.txt"])
-		cmdOuputToTxtfile(["dig", "checkws1.toffsintern.ml"])
+		cmdOuputToTxtfile(["dig", url])
 		if checkForwardCname() == True:
 			maintainLoop = False
+		end = timer()
+		if ((end-start)/60) > 60:
+			print("It has been an hour and WebSocket is still not active. Digging shall stop here.")
+			ws = False
 
-	end = timer()
-	print("WebSocket is now active!")
-	print("Time taken for WebSocket to become active:" (end - start)/60)
+	if ws != False:
+		print("WebSocket is now active!")
+		print("Time taken for WebSocket to become active: " (end - start)/60)
 
 
 def cmdOuputToTxtfile(command):
